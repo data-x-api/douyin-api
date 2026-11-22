@@ -20,7 +20,7 @@ from dataxapi import Api, ApiError, need_key
 
 SOURCE = "gh-douyin-api"
 SIGN_UP = f"https://dataxapi.com/zh/signin/?button={SOURCE}"
-PRICE = Decimal("0.02")  # 现价见 https://dataxapi.com/zh/apis/douyin/videos/search/
+PRICE = Decimal("0.02")  # 现价见 https://dataxapi.com/zh/apis/douyin/videos/search/?ref=gh-douyin-api
 COLUMNS = ["发布时间", "文案", "作者", "粉丝", "点赞", "评论", "分享", "收藏", "链接", "作品 ID"]
 
 

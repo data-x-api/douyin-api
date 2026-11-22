@@ -20,7 +20,7 @@ from dataxapi import Api, ApiError, need_key
 
 SOURCE = "gh-douyin-api"
 SIGN_UP = f"https://dataxapi.com/zh/signin/?button={SOURCE}"
-PRICE = Decimal("0.006")  # 现价见 https://dataxapi.com/zh/apis/douyin/index/keywords/history/
+PRICE = Decimal("0.006")  # 现价见 https://dataxapi.com/zh/apis/douyin/index/keywords/history/?ref=gh-douyin-api
 
 
 def main() -> None:

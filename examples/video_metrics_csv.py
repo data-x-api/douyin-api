@@ -21,7 +21,7 @@ from dataxapi import Api, ApiError, need_key
 
 SOURCE = "gh-douyin-api"
 SIGN_UP = f"https://dataxapi.com/zh/signin/?button={SOURCE}"
-PRICE = Decimal("0.002")  # 现价见 https://dataxapi.com/zh/apis/douyin/videos/metrics/
+PRICE = Decimal("0.002")  # 现价见 https://dataxapi.com/zh/apis/douyin/videos/metrics/?ref=gh-douyin-api
 
 
 def target(line: str) -> dict:
