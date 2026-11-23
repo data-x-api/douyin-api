@@ -40,7 +40,7 @@ DataXAPI 的客户近 30 天里调用最多的几个，从多到少：
 | [抖音评论回复](https://dataxapi.com/zh/apis/douyin/comments/replies/list/?ref=gh-douyin-api) | 按评论编号和它所在的视频编号取一页这条评论下的回复：正文、回复者、点赞数、发布时间。 | $0.002 一次 | `douyin.comments.replies.list` |
 | [抖音话题视频](https://dataxapi.com/zh/apis/douyin/hashtags/videos/list/?ref=gh-douyin-api) | 按话题编号取一页带这个话题的抖音视频，可按综合、最多点赞或最新发布排序：文案、作者、互动数、发布时间。 | $0.002 一次 | `douyin.hashtags.videos.list` |
 | [抖音达人互动与粉丝趋势](https://dataxapi.com/zh/apis/douyin/users/history/?ref=gh-douyin-api) | 按抖音账号的数字编号取最近 7 天或 30 天的变化（巨量算数）：净增粉丝、新增点赞、评论、分享和发布数，各自和上一个周期相比的变化比例，以及现在的总数；一次最多 5 个账号。给的是一个周期的合计，不是逐日序列。 | $0.002 一次 | `douyin.users.history` |
-| [抖音视频转文字（文案提取、逐字稿）](https://dataxapi.com/zh/apis/douyin/videos/transcript/get/?ref=gh-douyin-api) | 给一条抖音视频的链接、分享文案或编号，返回视频里说的话：全文、每一句的起止时间和现成的 SRT 字幕，连同标题、作者和时长；可以区分说话人。每次收费，识别语音的另按视频分钟数收，没人说话不收。只接 5 分钟以内的视频。超过 5 分钟、2 小时以内的视频先回一个凭证（job），过一会儿带着它再调这个接口取文字，价格一样，只在取到文字时收。 | $0.002 一次 | `douyin.videos.transcript.get` |
+| [抖音视频转文字（文案提取、逐字稿）](https://dataxapi.com/zh/apis/douyin/videos/transcript/get/?ref=gh-douyin-api) | 给一条抖音视频的链接、分享文案或编号，返回视频里说的话：全文、每一句的起止时间和现成的 SRT 字幕，连同标题、作者和时长；可以区分说话人。每次收费，识别语音的另按视频分钟数收，没人说话不收。5 分钟以内的视频直接返回文字；超过 5 分钟、2 小时以内的先回一个凭证（job），过一会儿带着它再调这个接口取文字，按实际分钟数收，只在取到文字时收。 | $0.002 一次 | `douyin.videos.transcript.get` |
 | [抖音相关视频](https://dataxapi.com/zh/apis/douyin/videos/related/?ref=gh-douyin-api) | 按视频编号取抖音在这条视频旁边推荐的一批相关视频：文案、作者、互动数。推荐结果每次可能不同。 | $0.002 一次 | `douyin.videos.related` |
 | [抖音无水印视频和图片下载地址](https://dataxapi.com/zh/apis/douyin/videos/media/get/?ref=gh-douyin-api) | 给一条抖音视频或图文的编号、链接或分享口令，返回它的全部文件地址：无水印视频的各档清晰度（另给一个平台的播放跳转地址）、封面、背景音乐、图文每张图的 JPEG 和实况图视频。地址不用带请求头，签名里写了过期时间的都给出 expires_at，过期了再调一次即可。 | $0.002 一次 | `douyin.videos.media.get` |
 
@@ -237,4 +237,4 @@ No platform account, cookie or QR login. Paid per call from $0.002; errors are n
 
 MIT
 
-<sub>接口和价格取自 DataXAPI 的目录 dc959672dd18e2d0、价格版本 21；以 [dataxapi.com/zh/apis](https://dataxapi.com/zh/apis/?ref=gh-douyin-api) 为准。</sub>
+<sub>接口和价格取自 DataXAPI 的目录 e43c3e964bcc3fc3、价格版本 21；以 [dataxapi.com/zh/apis](https://dataxapi.com/zh/apis/?ref=gh-douyin-api) 为准。</sub>
