@@ -2,7 +2,7 @@
 
 **抖音数据 API · 抖音评论采集 · 抖音视频播放量 · 抖音用户主页 · 抖音热搜榜 · 抖音指数（巨量算数）· 星图达人数据**
 
-这个仓库是 [DataXAPI](https://dataxapi.com/zh/?ref=gh-douyin-api) 的抖音接口说明和能直接跑的脚本：41 个接口，一把 Key，按次付费，$0.002 起，**出错不收费**。不用登录平台账号，不用 Cookie，不开浏览器。
+这个仓库是 [DataXAPI](https://dataxapi.com/zh/?ref=gh-douyin-api) 的抖音接口说明和能直接跑的脚本：42 个接口，一把 Key，按次付费，$0.002 起，**出错不收费**。不用登录平台账号，不用 Cookie，不开浏览器。
 
 [免费拿 Key：试用最多 333 次，不用绑卡](https://dataxapi.com/zh/signin/?button=gh-douyin-api) · [全部接口文档](https://dataxapi.com/zh/apis/?ref=gh-douyin-api) · [接进 AI（MCP）](#接进-aimcp) · [English](#english)
 
@@ -23,7 +23,7 @@ DataXAPI 的客户近 30 天里调用最多的几个，从多到少：
 | [抖音用户搜索](https://dataxapi.com/zh/apis/douyin/users/search/?ref=gh-douyin-api) | 按搜索词取一页抖音账号：账号编号、显示名、头像、粉丝数、作品数、获赞总数。 | $0.002 一次 |
 | [抖音巨量算数关键词热度趋势](https://dataxapi.com/zh/apis/douyin/index/keywords/history/?ref=gh-douyin-api) | 按一个关键词或一次 1 到 5 个关键词，加起止日期，取每个词在抖音上逐日的搜索指数和综合指数（巨量算数，也就是抖音指数），带本期、上期和去年同期的日均值。指数是平台算出的热度分，不是搜索次数；日期是中国时间（UTC+8）的自然日。 | $0.006 一次 |
 
-## 全部 41 个接口
+## 全部 42 个接口
 
 ### 视频、账号和评论
 
@@ -88,6 +88,7 @@ DataXAPI 的客户近 30 天里调用最多的几个，从多到少：
 | [抖音星图达人转化能力](https://dataxapi.com/zh/apis/douyin/xingtu/creators/conversion/get/?ref=gh-douyin-api) | 按星图达人编号取这位抖音达人带货视频的转化数据：相关视频数、播放中位数、推荐商品数，和销售额、千次播放成交额、商品价格、点击成本、组件点击次数、点击率各自所在的区间，以及带货品类。区间是平台给的文字，不是精确值；实测多数达人（包括电商等级 L4 的带货达人）各项区间都是空的（null），没有带货数据的达人返回“不存在”。 | $0.004 一次 | `douyin.xingtu.creators.conversion.get` |
 | [抖音星图营销活动日历](https://dataxapi.com/zh/apis/douyin/xingtu/campaigns/list/?ref=gh-douyin-api) | 按起止时间取星图营销日历上的活动：平台大事件、电商节点、情绪节点、创意营销、行业活动，每个带名称、介绍、类型、进行到哪一步、招商期和活动期。一次给全，不翻页。 | $0.004 一次 | `douyin.xingtu.campaigns.list` |
 | [抖音星图视频数据报告（播放量、完播率）](https://dataxapi.com/zh/apis/douyin/xingtu/videos/get/?ref=gh-douyin-api) | 按视频编号或链接取星图对一条抖音视频的数据报告：播放量和各项互动数，加上完播率、互动率、时长、作者粉丝数和作者的星图达人编号（可接着查这位达人的报价和传播数据）。星图收录的视频才有（多是星图达人的视频）。 | $0.004 一次 | `douyin.xingtu.videos.get` |
+| [抖音星图达人粉丝画像（备用版）](https://dataxapi.com/zh/apis/douyin/xingtu/backup/creators/audience/get/?ref=gh-douyin-api) | 抖音星图达人粉丝画像的备用版，原接口取不到时改调：参数和返回相同，价格更高。 | $0.04 一次 | `douyin.xingtu.backup.creators.audience.get` |
 
 ### 备用版：原接口取不到时改调
 
@@ -237,4 +238,4 @@ No platform account, cookie or QR login. Paid per call from $0.002; errors are n
 
 MIT
 
-<sub>接口和价格取自 DataXAPI 的目录 e43c3e964bcc3fc3、价格版本 21；以 [dataxapi.com/zh/apis](https://dataxapi.com/zh/apis/?ref=gh-douyin-api) 为准。</sub>
+<sub>接口和价格取自 DataXAPI 的目录 0051cce45e9530b9、价格版本 22；以 [dataxapi.com/zh/apis](https://dataxapi.com/zh/apis/?ref=gh-douyin-api) 为准。</sub>
